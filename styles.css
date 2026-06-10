@@ -672,6 +672,11 @@ h3 {
   background: var(--red-soft);
 }
 
+.paper-meta span.paper-topic {
+  color: #6f5216;
+  background: var(--gold-soft);
+}
+
 .two-column {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
