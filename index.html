@@ -3,24 +3,26 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ziyan Liu</title>
+    <title>Ziyan Liu · AI Research, USTC</title>
     <meta
       name="description"
-      content="Ziyan Liu is a joint Ph.D. student at USTC and Shanghai AI Laboratory. His current research focuses on LLM post-training and Agentic RL, with broader interests in Embodied AI, World Models, and VLA."
+      content="Ziyan Liu is a Ph.D. student in Artificial Intelligence at the School of Information Science and Technology, USTC. His current research focuses on LLM post-training and Agentic RL, with broader interests in Embodied AI, World Models, and VLA."
     >
+    <meta name="theme-color" content="#fafafa">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#top">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Back to top">
-        <span class="brand-mark">ZL</span>
-        <span>
-          <strong>Ziyan Liu</strong>
-          <small>USTC · Shanghai AI Lab</small>
-        </span>
+        <span class="brand-mark" aria-hidden="true">zl.</span>
+        <span class="brand-name">Ziyan Liu</span>
       </a>
-      <nav aria-label="Main navigation">
-        <a href="#top">About Me</a>
+      <button class="menu-toggle icon-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation" hidden>
+        <i data-lucide="menu" aria-hidden="true"></i>
+      </button>
+      <nav id="main-navigation" aria-label="Main navigation">
+        <a href="#top" aria-current="location">About</a>
         <a href="#news">News</a>
         <a href="#education">Education</a>
         <a href="#publications">Publications</a>
@@ -29,95 +31,53 @@
     </header>
 
     <main id="top">
-      <section class="hero section-grid" aria-labelledby="intro-title">
-        <aside class="profile-card" aria-label="Personal information">
-          <img class="profile-photo" src="images/avatar.jpg" alt="Ziyan Liu profile image">
-          <h1 id="intro-title">Ziyan Liu <span>(刘子言)</span></h1>
-          <p class="profile-role">Joint Ph.D. student at USTC and Shanghai AI Laboratory.</p>
-          <ul class="profile-links" aria-label="Personal links">
-            <li>
-              <span class="profile-link profile-link-static">
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <path d="M12 21s7-6.4 7-12A7 7 0 0 0 5 9c0 5.6 7 12 7 12Z"></path>
-                  <circle cx="12" cy="9" r="2.4"></circle>
-                </svg>
-                Shanghai, China
-              </span>
-            </li>
-            <li>
-              <a class="profile-link" href="mailto:liuziyan@mail.ustc.edu.cn">
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <path d="M4 6h16v12H4z"></path>
-                  <path d="m4 7 8 6 8-6"></path>
-                </svg>
-                Email
-              </a>
-            </li>
-            <li>
-              <a class="profile-link is-placeholder" href="#" aria-disabled="true">
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <path d="M9 19c-3.5 1-3.5-1.8-5-2.2"></path>
-                  <path d="M15 22v-3.6c0-1-.3-1.7-.9-2.1 3-.4 6.1-1.5 6.1-6.6a5.1 5.1 0 0 0-1.4-3.5 4.7 4.7 0 0 0-.1-3.4s-1.2-.4-3.8 1.4a13 13 0 0 0-6.8 0C5.5 2.4 4.3 2.8 4.3 2.8a4.7 4.7 0 0 0-.1 3.4 5.1 5.1 0 0 0-1.4 3.5c0 5.1 3.1 6.2 6.1 6.6-.5.4-.9 1.2-.9 2.4V22"></path>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a class="profile-link" href="https://scholar.google.com/citations?view_op=list_works&amp;hl=en&amp;user=ocoYCE8AAAAJ" target="_blank" rel="noreferrer">
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z"></path>
-                  <path d="M6.5 10.5v4.2c0 1.4 2.5 3.3 5.5 3.3s5.5-1.9 5.5-3.3v-4.2"></path>
-                  <path d="M21 8.5v6"></path>
-                </svg>
-                Google Scholar
-              </a>
-            </li>
-          </ul>
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="intro-heading">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Artificial Intelligence · USTC</p>
+          <h1 id="intro-title">Ziyan Liu <span lang="zh">刘子言</span></h1>
+          <p class="intro-role">Ph.D. student in Artificial Intelligence</p>
+        </div>
+        <aside class="profile" aria-label="Personal information">
+          <img class="profile-photo" src="images/avatar.jpg" alt="Ziyan Liu's profile avatar" width="844" height="1102" fetchpriority="high">
+          <p class="profile-location"><i data-lucide="map-pin" aria-hidden="true"></i>Shanghai, China</p>
+          <p class="profile-note">School of Information, USTC<br>Expected Ph.D. · June 2029</p>
         </aside>
-
-        <div class="hero-copy">
-          <p class="eyebrow">Joint Ph.D. Student · USTC × Shanghai AI Laboratory</p>
-          <p class="lead">
-            I am currently a joint Ph.D. student at the University of Science and Technology of China (USTC) and
-            Shanghai AI Laboratory. My M.S. advisor is Academician
+        <div class="intro-copy">
+          <p>
+            I am currently a Ph.D. student in Artificial Intelligence at the School of Information Science and Technology,
+            University of Science and Technology of China (USTC). My M.S. advisor is Academician
             <a href="https://sist.ustc.edu.cn/2025/1203/c5139a714624/page.htm" target="_blank" rel="noreferrer">Feng Wu</a>,
             and my Ph.D. advisors are
             <a href="https://scholar.google.com/citations?hl=en&amp;user=GMzzRRUAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noreferrer">Prof. Dahua Lin</a>
             and <a href="https://bivlab123.github.io" target="_blank" rel="noreferrer">Prof. Feng Zhao</a>.
             I received my Bachelor's degree in 2024 from the
             <a href="https://sgy.ustc.edu.cn/main.htm" target="_blank" rel="noreferrer">School of the Gifted Young</a> (少年班)
-            at USTC. My current research focuses on <strong>LLM post-training</strong> and <strong>Agentic AI</strong>.
+            at USTC.
+          </p>
+          <p>My current research focuses on <strong>LLM post-training</strong> and <strong>Agentic AI</strong>.
             My research interests also include Embodied AI, especially World Models and Vision-Language-Action (VLA)
             models. A recurring theme across my work is improving the efficiency of large-scale AI systems.
             Previously, I worked on AI4EDA, mainly reinforcement learning for chip placement optimization.
           </p>
-          <div class="hero-actions" aria-label="Contact and page links">
-            <a class="button primary" href="mailto:liuziyan@mail.ustc.edu.cn">Email</a>
-            <a class="button" href="#publications">Publications</a>
+          <div class="profile-links" aria-label="Personal links">
+            <a href="mailto:liuziyan@mail.ustc.edu.cn"><i data-lucide="mail" aria-hidden="true"></i>Email</a>
+            <a href="https://scholar.google.com/citations?view_op=list_works&amp;hl=en&amp;user=ocoYCE8AAAAJ" target="_blank" rel="noreferrer"><i data-lucide="graduation-cap" aria-hidden="true"></i>Google Scholar</a>
+            <a href="https://github.com/ziyanliux" target="_blank" rel="noreferrer"><i data-lucide="github" aria-hidden="true"></i>GitHub</a>
           </div>
-          <dl class="snapshot" aria-label="Profile summary">
-            <div>
-              <dt>Expected Ph.D.</dt>
-              <dd>June 2029</dd>
-            </div>
-            <div>
-              <dt>Focus</dt>
-              <dd><strong>LLM Post-training</strong> · <strong>Agentic RL</strong></dd>
-            </div>
-            <div>
-              <dt>Affiliation</dt>
-              <dd>USTC & Shanghai AI Lab</dd>
-            </div>
-          </dl>
+        </div>
+        <div class="research-topics" aria-label="Research interests">
+          <span class="research-label">Research interests</span>
+          <span>LLM Post-training</span><span>Agentic RL</span><span>World Models &amp; VLA</span><span>AI4EDA</span>
         </div>
       </section>
 
       <section class="content-section two-column news-section" id="news" aria-labelledby="news-title">
         <div class="section-heading">
-          <p class="eyebrow">Updates</p>
+          <p class="section-index" aria-hidden="true">01 / Updates</p>
           <h2 id="news-title">News</h2>
         </div>
-        <ol class="news-list">
+        <div class="news-content">
+        <ol class="news-list" id="news-list">
           <li>
             <time datetime="2026-06">Jun 2026</time>
             <p>Released <a href="https://arxiv.org/pdf/2605.30159" target="_blank" rel="noreferrer">MMPO</a> and <a href="https://arxiv.org/abs/2605.29790" target="_blank" rel="noreferrer">Evolve as a Team</a> on long-horizon agents and multi-agent self-evolution.</p>
@@ -147,38 +107,43 @@
             <p><a href="https://openreview.net/forum?id=AJGwSx0RUV" target="_blank" rel="noreferrer">EfficientPlace</a> was accepted to ICML 2024.</p>
           </li>
         </ol>
+        <button class="text-button news-toggle" type="button" aria-expanded="false" aria-controls="news-list" hidden><span>Earlier updates</span><i data-lucide="arrow-down" aria-hidden="true"></i></button>
+        </div>
       </section>
 
       <section class="content-section two-column" id="education" aria-labelledby="education-title">
         <div class="section-heading">
-          <p class="eyebrow">Education</p>
+          <p class="section-index" aria-hidden="true">02 / Background</p>
           <h2 id="education-title">Education</h2>
         </div>
         <div class="timeline">
           <article>
-            <time>June 2026 - Present</time>
-            <h3>University of Science and Technology of China & Shanghai AI Laboratory</h3>
+            <time>June 2026 - Present · Expected June 2029</time>
+            <h3>Ph.D. student in Artificial Intelligence</h3>
+            <p class="institution">University of Science and Technology of China</p>
             <p>
-              Ph.D. student in Artificial Intelligence. Advisors:
+              School of Information Science and Technology. Advisors:
               <a href="https://scholar.google.com/citations?hl=en&amp;user=GMzzRRUAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noreferrer">Dahua Lin</a>
               and <a href="https://bivlab123.github.io" target="_blank" rel="noreferrer">Feng Zhao</a>.
             </p>
           </article>
           <article>
             <time>September 2024 - June 2026</time>
-            <h3>University of Science and Technology of China · School of Information Science and Technology</h3>
+            <h3>M.S. student in Artificial Intelligence</h3>
+            <p class="institution">University of Science and Technology of China</p>
             <p>
-              M.S. student in Artificial Intelligence. Advisor:
+              School of Information Science and Technology. Advisor:
               <a href="https://sist.ustc.edu.cn/2025/1203/c5139a714624/page.htm" target="_blank" rel="noreferrer">Feng Wu</a>.
             </p>
           </article>
           <article>
             <time>September 2020 - June 2024</time>
-            <h3>
+            <h3>B.S. in Physics</h3>
+            <p class="institution">
               University of Science and Technology of China ·
               <a href="https://sgy.ustc.edu.cn/main.htm" target="_blank" rel="noreferrer">School of the Gifted Young</a>
-            </h3>
-            <p>B.S. in Physics. GPA: 90.11/100.</p>
+            </p>
+            <p>GPA: 90.11/100.</p>
           </article>
         </div>
       </section>
@@ -186,23 +151,28 @@
       <section class="content-section" id="publications" aria-labelledby="publications-title">
         <div class="section-heading publications-heading">
           <div>
+            <p class="section-index" aria-hidden="true">03 / Research</p>
             <h2 id="publications-title">Publications</h2>
-            <p class="eyebrow after-heading" id="publication-view-label">Selected Publications</p>
           </div>
+          <a class="text-link" href="https://scholar.google.com/citations?view_op=list_works&amp;hl=en&amp;user=ocoYCE8AAAAJ" target="_blank" rel="noreferrer">Google Scholar<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
         </div>
-        <div class="publication-toolbar" aria-label="Publication filters">
+        <div class="publication-controls" hidden>
+        <div class="publication-toolbar" role="group" aria-label="Publication filters">
           <button class="filter-button active" type="button" data-filter="selected" data-label="Selected Publications" aria-pressed="true">Selected</button>
           <button class="filter-button" type="button" data-filter="llm" data-label="Complete Publications · Agent / VLA" aria-pressed="false">Agent / VLA</button>
           <button class="filter-button" type="button" data-filter="eda" data-label="Complete Publications · AI4EDA" aria-pressed="false">AI4EDA</button>
+          <button class="filter-button" type="button" data-filter="all" data-label="All Publications" aria-pressed="false">All</button>
         </div>
-        <div class="publication-list">
+        <p class="publication-count" role="status" aria-live="polite" aria-atomic="true"></p>
+        </div>
+        <div class="publication-list" id="publication-list">
           <article class="paper paper-with-figure" data-topic="llm" data-selected="true">
             <button class="paper-figure" type="button" aria-label="View ThoughtFold figure">
-              <span class="paper-venue-badge">ICML 2026</span>
-              <img src="images/selected_paper_figs/thoughtfold.png" alt="ThoughtFold method comparison diagram">
+              <img src="images/selected_paper_figs/thoughtfold.png" alt="ThoughtFold method comparison diagram" loading="lazy" decoding="async">
             </button>
             <div class="paper-content">
               <div class="paper-meta">
+                <span class="paper-venue">ICML 2026</span>
                 <span class="paper-role">First Author</span>
                 <span class="paper-topic">Agent / VLA</span>
               </div>
@@ -217,11 +187,11 @@
 
           <article class="paper paper-with-figure" data-topic="llm" data-selected="true">
             <button class="paper-figure" type="button" aria-label="View ArborKV figure">
-              <span class="paper-venue-badge">ICML 2026</span>
-              <img src="images/selected_paper_figs/arborkv.png" alt="ArborKV method overview diagram">
+              <img src="images/selected_paper_figs/arborkv.png" alt="ArborKV method overview diagram" loading="lazy" decoding="async">
             </button>
             <div class="paper-content">
               <div class="paper-meta">
+                <span class="paper-venue">ICML 2026</span>
                 <span class="paper-role">Co-first Author</span>
                 <span class="paper-topic">Agent / VLA</span>
               </div>
@@ -229,18 +199,18 @@
               <p>Yeqiu Chen*, <strong>Ziyan Liu</strong>*, Zhenxin Huang, Runquan Gui, Hong Wang, Lei Liu†</p>
               <div class="paper-actions" aria-label="ArborKV links">
                 <a class="paper-action" href="https://arxiv.org/pdf/2605.22106" target="_blank" rel="noreferrer">Paper</a>
-                <a class="paper-action code-action is-disabled" href="#" aria-disabled="true">Code</a>
+                <span class="paper-action code-action is-disabled" aria-label="Code unavailable">Code</span>
               </div>
             </div>
           </article>
 
           <article class="paper paper-with-figure" data-topic="llm" data-selected="true">
             <button class="paper-figure paper-figure-tall" type="button" aria-label="View VLA-Pruner figure">
-              <span class="paper-venue-badge">Preprint</span>
-              <img src="images/selected_paper_figs/vlapruner.png" alt="VLA-Pruner method overview diagram">
+              <img src="images/selected_paper_figs/vlapruner.png" alt="VLA-Pruner method overview diagram" loading="lazy" decoding="async">
             </button>
             <div class="paper-content">
               <div class="paper-meta">
+                <span class="paper-venue">Preprint</span>
                 <span class="paper-role">First Author</span>
                 <span class="paper-topic">Agent / VLA</span>
               </div>
@@ -255,11 +225,11 @@
 
           <article class="paper paper-with-figure" data-topic="llm" data-selected="true">
             <button class="paper-figure paper-figure-wide" type="button" aria-label="View MMPO figure">
-              <span class="paper-venue-badge">Preprint</span>
-              <img src="images/selected_paper_figs/mmpo.png" alt="MMPO method overview diagram">
+              <img src="images/selected_paper_figs/mmpo.png" alt="MMPO method overview diagram" loading="lazy" decoding="async">
             </button>
             <div class="paper-content">
               <div class="paper-meta">
+                <span class="paper-venue">Preprint</span>
                 <span class="paper-role">First Author</span>
                 <span class="paper-topic">Agent / VLA</span>
               </div>
@@ -267,12 +237,12 @@
               <p><strong>Ziyan Liu</strong>*, Zhezheng Hao*, Yeqiu Chen*, Hong Wang, ..., Wei Xia†, Feng Liu</p>
               <div class="paper-actions" aria-label="MMPO links">
                 <a class="paper-action" href="https://arxiv.org/pdf/2605.30159" target="_blank" rel="noreferrer">Paper</a>
-                <a class="paper-action code-action is-disabled" href="#" aria-disabled="true">Code</a>
+                <span class="paper-action code-action is-disabled" aria-label="Code unavailable">Code</span>
               </div>
             </div>
           </article>
 
-          <article class="paper" data-topic="llm" data-selected="false" hidden>
+          <article class="paper" data-topic="llm" data-selected="false">
             <div class="paper-meta">
               <span>Preprint</span>
             </div>
@@ -282,11 +252,11 @@
 
           <article class="paper paper-with-figure" data-topic="eda" data-selected="true">
             <button class="paper-figure paper-figure-tall" type="button" aria-label="View PPA-driven Placement figure">
-              <span class="paper-venue-badge">DATE 2026</span>
-              <img src="images/selected_paper_figs/PPA.png" alt="PPA-driven placement method overview diagram">
+              <img src="images/selected_paper_figs/PPA.png" alt="PPA-driven placement method overview diagram" loading="lazy" decoding="async">
             </button>
             <div class="paper-content">
               <div class="paper-meta">
+                <span class="paper-venue">DATE 2026</span>
                 <span class="paper-role">First Author</span>
                 <span class="paper-topic">AI4EDA</span>
               </div>
@@ -294,18 +264,18 @@
               <p><strong>Ziyan Liu</strong>, Siyuan Xu, Jie Wang†, Zijie Geng, Yeqiu Chen, Mingxuan Yuan, Jianye Hao, Feng Wu</p>
               <div class="paper-actions" aria-label="PPA-driven Placement links">
                 <a class="paper-action" href="https://ieeexplore.ieee.org/abstract/document/11539653/" target="_blank" rel="noreferrer">Paper</a>
-                <a class="paper-action code-action is-disabled" href="#" aria-disabled="true">Code</a>
+                <span class="paper-action code-action is-disabled" aria-label="Code unavailable">Code</span>
               </div>
             </div>
           </article>
 
           <article class="paper paper-with-figure" data-topic="eda" data-selected="true">
             <button class="paper-figure paper-figure-eigensolver" type="button" aria-label="View Learning-Guided Integration Contours figure">
-              <span class="paper-venue-badge">ICML 2026</span>
-              <img src="images/selected_paper_figs/eigensolver.png" alt="Learning-guided eigensolver contour construction diagram">
+              <img src="images/selected_paper_figs/eigensolver.png" alt="Learning-guided eigensolver contour construction diagram" loading="lazy" decoding="async">
             </button>
             <div class="paper-content">
               <div class="paper-meta">
+                <span class="paper-venue">ICML 2026</span>
                 <span class="paper-role">Co-first Author</span>
                 <span class="paper-topic">AI4EDA</span>
               </div>
@@ -313,18 +283,18 @@
               <p>Yeqiu Chen*, <strong>Ziyan Liu</strong>*, Hong Wang†, Lei Liu</p>
               <div class="paper-actions" aria-label="Learning-Guided Integration Contours links">
                 <a class="paper-action" href="https://arxiv.org/pdf/2511.01927" target="_blank" rel="noreferrer">Paper</a>
-                <a class="paper-action code-action is-disabled" href="#" aria-disabled="true">Code</a>
+                <span class="paper-action code-action is-disabled" aria-label="Code unavailable">Code</span>
               </div>
             </div>
           </article>
 
           <article class="paper paper-with-figure" data-topic="eda" data-selected="true">
             <button class="paper-figure paper-figure-tall" type="button" aria-label="View LaMPlace figure">
-              <span class="paper-venue-badge">ICLR 2025 Oral</span>
-              <img src="images/selected_paper_figs/lamplace.png" alt="LaMPlace method overview diagram">
+              <img src="images/selected_paper_figs/lamplace.png" alt="LaMPlace method overview diagram" loading="lazy" decoding="async">
             </button>
             <div class="paper-content">
               <div class="paper-meta">
+                <span class="paper-venue">ICLR 2025 Oral</span>
                 <span class="paper-role">Project Lead</span>
                 <span class="paper-topic">AI4EDA</span>
               </div>
@@ -337,7 +307,7 @@
             </div>
           </article>
 
-          <article class="paper" data-topic="eda" data-selected="false" hidden>
+          <article class="paper" data-topic="eda" data-selected="false">
             <div class="paper-meta">
               <span>NeurIPS 2025</span>
             </div>
@@ -345,7 +315,7 @@
             <p>Zhihai Wang*, Zijie Geng*, ..., <strong>Ziyan Liu</strong>, ..., et al.</p>
           </article>
           
-          <article class="paper" data-topic="eda" data-selected="false" hidden>
+          <article class="paper" data-topic="eda" data-selected="false">
             <div class="paper-meta">
               <span>ICML 2024</span>
             </div>
@@ -353,7 +323,7 @@
             <p>Zijie Geng, Jie Wang†, <strong>Ziyan Liu</strong>, Siyuan Xu, ..., Feng Wu</p>
           </article>
 
-          <article class="paper" data-topic="llm" data-selected="false" hidden>
+          <article class="paper" data-topic="llm" data-selected="false">
             <div class="paper-meta">
               <span>CVPR 2026</span>
             </div>
@@ -365,9 +335,9 @@
         </div>
       </section>
 
-      <section class="content-section service" id="service" aria-labelledby="service-title">
+      <section class="content-section two-column service" id="service" aria-labelledby="service-title">
         <div class="section-heading">
-          <p class="eyebrow">Academic Service</p>
+          <p class="section-index" aria-hidden="true">04 / Community</p>
           <h2 id="service-title">Service</h2>
         </div>
         <ul class="service-list">
@@ -387,12 +357,16 @@
             <strong>AAAI 2026</strong>
             <span>Reviewer</span>
           </li>
+          <li>
+            <strong>TMLR</strong>
+            <span>Reviewer</span>
+          </li>
         </ul>
       </section>
 
-      <section class="content-section awards" aria-labelledby="awards-title">
+      <section class="content-section two-column awards" aria-labelledby="awards-title">
         <div class="section-heading">
-          <p class="eyebrow">Awards</p>
+          <p class="section-index" aria-hidden="true">05 / Recognition</p>
           <h2 id="awards-title">Awards</h2>
         </div>
         <ul>
@@ -404,16 +378,21 @@
       </section>
     </main>
 
-    <div class="figure-lightbox" id="figure-lightbox" role="dialog" aria-modal="true" aria-label="Paper figure preview" hidden>
-      <button class="figure-lightbox-close" type="button" aria-label="Close figure preview">×</button>
-      <img id="figure-lightbox-image" src="" alt="">
-    </div>
+    <dialog class="figure-lightbox" id="figure-lightbox" aria-labelledby="figure-lightbox-caption">
+      <div class="figure-lightbox-toolbar">
+        <p id="figure-lightbox-caption">Paper figure</p>
+        <button class="figure-lightbox-close icon-button" type="button" aria-label="Close figure preview" title="Close preview"><i data-lucide="x" aria-hidden="true"></i></button>
+      </div>
+      <img id="figure-lightbox-image" alt="">
+    </dialog>
 
     <footer class="site-footer">
       <p>© 2026 Ziyan Liu</p>
       <a href="mailto:liuziyan@mail.ustc.edu.cn">liuziyan@mail.ustc.edu.cn</a>
+      <a class="back-to-top" href="#top">Back to top<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="vendor/lucide.min.js" defer></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
