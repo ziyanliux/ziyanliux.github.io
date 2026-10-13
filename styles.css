@@ -86,7 +86,6 @@ h2 { margin-bottom: 0; font: 32px/1.2 var(--serif); font-weight: 500; }
 .news-list li { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 21px; padding: 0 0 15px; }
 .news-list li:last-child { padding-bottom: 0; }
 .news-list time { padding-top: 2px; color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
-.news-list li:first-child time { color: var(--accent); }
 .news-list p { margin-bottom: 0; font-size: 13px; line-height: 1.8; }
 .news-list a { font-weight: 500; }
 .text-button { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 0; border: 0; background: transparent; color: var(--accent); font-size: 12px; }

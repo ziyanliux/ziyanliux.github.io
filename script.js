@@ -29,6 +29,30 @@ filterButtons.forEach((button) => {
 });
 applyPublicationFilter(document.querySelector(".filter-button.active"));
 
+// Refresh public repository star counts each time the page is opened.
+const updateGitHubStars = async (label) => {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
+  try {
+    const response = await fetch("https://api.github.com/repos/" + label.dataset.githubStars, {
+      headers: { Accept: "application/vnd.github+json" },
+      signal: controller.signal,
+      cache: "no-store",
+    });
+    if (!response.ok) return;
+    const repository = await response.json();
+    const count = repository.stargazers_count;
+    if (Number.isSafeInteger(count) && count >= 0) {
+      label.textContent = "Code · " + count.toLocaleString("en-US") + (count === 1 ? " star" : " stars");
+    }
+  } catch {
+    // Keep the Code link usable when GitHub is unavailable or rate-limited.
+  } finally {
+    clearTimeout(timeout);
+  }
+};
+document.querySelectorAll("[data-github-stars]").forEach(updateGitHubStars);
+
 const newsToggle = document.querySelector(".news-toggle");
 const earlierNews = [...document.querySelectorAll(".news-list li")].slice(3);
 earlierNews.forEach((item) => { item.hidden = true; });
