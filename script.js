@@ -30,25 +30,43 @@ filterButtons.forEach((button) => {
 applyPublicationFilter(document.querySelector(".filter-button.active"));
 
 // Refresh public repository star counts each time the page is opened.
-const updateGitHubStars = async (label) => {
+const fetchStarsJSON = async (url) => {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8000);
   try {
-    const response = await fetch("https://api.github.com/repos/" + label.dataset.githubStars, {
+    const response = await fetch(url, {
       headers: { Accept: "application/vnd.github+json" },
       signal: controller.signal,
       cache: "no-store",
     });
-    if (!response.ok) return;
-    const repository = await response.json();
-    const count = repository.stargazers_count;
-    if (Number.isSafeInteger(count) && count >= 0) {
-      label.textContent = "Code · " + count.toLocaleString("en-US") + (count === 1 ? " star" : " stars");
-    }
-  } catch {
-    // Keep the Code link usable when GitHub is unavailable or rate-limited.
+    if (!response.ok) throw new Error("Star count unavailable");
+    return await response.json();
   } finally {
     clearTimeout(timeout);
+  }
+};
+const updateGitHubStars = async (label) => {
+  const repositoryName = label.dataset.githubStars;
+  try {
+    const repository = await fetchStarsJSON("https://api.github.com/repos/" + repositoryName);
+    const count = repository.stargazers_count;
+    if (!Number.isSafeInteger(count) || count < 0) throw new Error("Invalid star count");
+    label.textContent = "Code · " + count.toLocaleString("en-US") + (count === 1 ? " star" : " stars");
+  } catch {
+    try {
+      // Shields supplies a cached count when GitHub's public API is rate-limited.
+      const badge = await fetchStarsJSON("https://img.shields.io/github/stars/" + repositoryName + ".json?cacheSeconds=300");
+      const value = badge.value || badge.message;
+      const count = Number(value);
+      if (typeof value !== "string" || value.trim() === "") return;
+      if (Number.isSafeInteger(count) && count >= 0) {
+        label.textContent = "Code · " + count.toLocaleString("en-US") + (count === 1 ? " star" : " stars");
+      } else if (/^\d+(?:\.\d+)?[kMB]$/.test(value)) {
+        label.textContent = "Code · " + value + " stars";
+      }
+    } catch {
+      // Keep the Code link usable if both services are unavailable.
+    }
   }
 };
 document.querySelectorAll("[data-github-stars]").forEach(updateGitHubStars);
