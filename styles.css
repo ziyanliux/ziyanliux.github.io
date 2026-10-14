@@ -148,6 +148,7 @@ h2 { margin-bottom: 0; font: 32px/1.2 var(--serif); font-weight: 500; }
 .site-footer { display: flex; align-items: center; gap: 24px; padding-block: 25px 32px; color: var(--muted); font-size: 11px; }
 .site-footer p { margin: 0; }
 .site-footer > a:not(.back-to-top) { color: var(--muted); }
+.site-traffic { display: flex; flex-wrap: wrap; gap: 12px; font-variant-numeric: tabular-nums; }
 .back-to-top { display: inline-flex; align-items: center; gap: 5px; margin-left: auto; }
 .back-to-top svg { width: 14px; height: 14px; }
 
@@ -233,6 +234,7 @@ h2 { margin-bottom: 0; font: 32px/1.2 var(--serif); font-weight: 500; }
   .service-list { gap: 20px; }
   .site-footer { flex-wrap: wrap; gap: 8px 16px; padding-block: 22px; font-size: 10px; }
   .site-footer > a:not(.back-to-top) { order: 3; width: 100%; }
+  .site-traffic { order: 4; width: 100%; }
   .figure-lightbox { max-width: calc(100% - 20px); padding: 12px; }
   .figure-lightbox-toolbar { gap: 14px; }
 }
