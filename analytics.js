@@ -3,11 +3,6 @@
   if (location.origin !== "https://ziyanliux.github.io") return;
   if (navigator.doNotTrack === "1" || window.doNotTrack === "1" || navigator.globalPrivacyControl === true) return;
 
-  const stats = document.querySelector("[data-traffic-stats]");
-  const views = document.querySelector("[data-traffic-views]");
-  const visitors = document.querySelector("[data-traffic-visitors]");
-  if (!stats || !views || !visitors) return;
-
   const callback = "HomepageTraffic_" + Math.random().toString(36).slice(2);
   const request = document.createElement("script");
   let timeout;
@@ -18,15 +13,8 @@
   };
 
   // Busuanzi's official client uses this JSONP endpoint for site PV and UV.
-  window[callback] = (data) => {
-    if (data && Number.isSafeInteger(data.site_pv) && data.site_pv >= 0 &&
-        Number.isSafeInteger(data.site_uv) && data.site_uv >= 0) {
-      views.textContent = data.site_pv.toLocaleString("en-US");
-      visitors.textContent = data.site_uv.toLocaleString("en-US");
-      stats.hidden = false;
-    }
-    cleanup();
-  };
+  // Record the visit without rendering counters on the page.
+  window[callback] = cleanup;
   request.src = "https://busuanzi.ibruce.info/busuanzi?jsonpCallback=" + callback;
   request.async = true;
   request.referrerPolicy = "origin";
